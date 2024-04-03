@@ -1,3 +1,3 @@
--- ESLINT
--- HUSKY
--- JWT
+- ESLINT
+- HUSKY
+- JWT
