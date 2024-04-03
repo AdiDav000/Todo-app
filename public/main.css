@@ -1,0 +1,117 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100%;
+    height: calc(100vh - 80px);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #D20062;
+}
+h1{
+    color: #FFEBB2;
+    margin-top: 20px;
+}
+.container{
+    margin: auto;
+    width: 50%;
+    height: 100%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    background-color: #FEFDED;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+    position: relative;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+li{
+    width: 90%;
+    height: 50px;
+    background-color: #D20062;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 5px grey;
+}
+form{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+form > input{
+    width: 80%;
+    border: none;
+    margin: auto;
+    background-color: #D20062;
+    height: 70px;
+    font-size: 30px;
+    color: #FFEBB2;
+    font-weight: 800;
+    border-radius: 40px;
+    padding: 0px 10px;
+    box-shadow: 0px 0px 3px grey;
+}
+input::placeholder{
+    color: #FFEBB2;
+}
+form> input:focus{
+    outline: none;
+    background-color: #FF8E8F;
+}
+form > button{
+    width: 100px;
+    height: 70px;
+    background-color: crimson;
+    margin: auto;
+    border-radius: 50px;
+    border: none;
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: 900;
+    box-shadow: 0px 0px 3px grey;
+    cursor: pointer;
+}
+form > button:hover{
+    transform: scale(1.05);
+}
+i{
+    color: white;
+    margin-left: 20px;
+    font-size: 30px;
+    text-shadow: 0px 0px 5px grey;
+}
+p{
+    margin-left: 20px;
+    font-size: 30px;
+    height: 85%;
+    color: #FFEBB2;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+}

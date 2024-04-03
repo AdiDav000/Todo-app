@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <h1>Todos</h1>
+        <div class="container">
+            <ul>
+                <% if (locals.list){ %>
+                <% for (var i = 0;i<list.length;i++){ %>
+                <li><% if (list[i].active){ %><i class="fa-regular fa-circle" onclick="check('<%= i %>')"></i><p><%= list[i].text %></p><% } else{ %>
+                    <i class="fa-solid fa-circle"></i><p class="strikethrough"><%= list[i].text %></p>
+                    <% } %>
+                </li>
+
+                <% } %>
+                <% } %>
+            </ul>
+            <form class="new_todo" method="post" action="/list/new">
+                <input type="text" name="todo_text" placeholder="New Todo"></input>
+                <button type="submit">Post</button>
+            </form>
+        </div>
+        <script>
+            const check = (text)=>{
+                fetch('/list/'+text, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(()=>{
+                    window.location.href="/list";
+                })
+            }
+        </script>
+    </body>
+</html>
